@@ -11,9 +11,9 @@ class Api::V1::EmployeesController < ApplicationController
   end
 
   def create
-    @employee = Employee.new(first_name: params[:first_name],
-                                last_name: params[:last_name],
-                                email: params[:email])
+    @employee = Employee.new(first_name: params[:param_first_name],
+                                last_name: params[:param_last_name],
+                                email: params[:param_email])
     if @employee.save
       render :show
     else
